@@ -1,7 +1,6 @@
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { FaSun, FaMoon } from "react-icons/fa";
 import myPhoto from "../assets/Talha.jpg";
 
 const NavBar = () => {
@@ -10,24 +9,7 @@ const NavBar = () => {
   const [activeItem, setActiveItem] = useState("Home");
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [theme, setTheme] = useState("dark");
   const navOffset = -96;
-
-  useEffect(() => {
-    const checkTheme = () => {
-      setTheme(document.documentElement.classList.contains("dark") ? "dark" : "light");
-    };
-    checkTheme();
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
-    return () => observer.disconnect();
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
-    localStorage.setItem("theme", newTheme);
-  };
 
   const { scrollYProgress } = useScroll();
   const smoothScrollProgress = useSpring(scrollYProgress, {
@@ -182,17 +164,6 @@ const NavBar = () => {
               ))}
             </div>
 
-            <button
-              onClick={toggleTheme}
-              className={`p-2.5 rounded-xl border transition-colors duration-300 flex-shrink-0
-                ${theme === "dark"
-                  ? "bg-slate-800/80 border-slate-700/60 hover:bg-slate-700 text-yellow-400"
-                  : "bg-gray-100 border-gray-300 hover:bg-indigo-100 text-indigo-600"}`}
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? <FaSun className="text-lg" /> : <FaMoon className="text-lg" />}
-            </button>
-
             <ScrollLink
               to="contact"
               spy={true}
@@ -207,17 +178,6 @@ const NavBar = () => {
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
-            <button
-              onClick={toggleTheme}
-              className={`p-2 rounded-lg border transition-colors duration-300 flex-shrink-0
-                ${theme === "dark"
-                  ? "bg-slate-850/90 border-slate-700/60 hover:bg-slate-700 text-yellow-400"
-                  : "bg-gray-100 border-gray-300 hover:bg-indigo-100 text-indigo-600"}`}
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? <FaSun className="text-base" /> : <FaMoon className="text-base" />}
-            </button>
-
             <button
               type="button"
               className="group inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300/80 text-slate-700 transition hover:border-indigo-500 hover:text-indigo-600 dark:border-slate-700 dark:text-slate-200 dark:hover:border-indigo-400 dark:hover:text-indigo-300"

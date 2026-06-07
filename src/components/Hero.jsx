@@ -139,6 +139,21 @@ const Hero = () => {
         </div>
       </motion.div>
 
+      {/* Mobile-only Floating Theme Toggle */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+        className={`fixed bottom-6 left-6 z-[70] p-4 rounded-full shadow-2xl border md:hidden transition-colors duration-300
+          ${theme === "dark"
+            ? "bg-[#232336]/95 border-white/10 text-yellow-400 hover:bg-[#35355a]"
+            : "bg-white/95 border-purple-200 text-indigo-500 hover:bg-[#e0e7ef]"}`}
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        aria-label="Toggle theme"
+      >
+        {theme === "dark" ? <FaSun className="text-xl" /> : <FaMoon className="text-xl" />}
+      </motion.button>
+
       {/* Left Content - Takes more vertical space now */}
       <motion.div
         className={`flex-1 text-center md:text-left z-10 space-y-8 transition-colors duration-500 md:ml-20

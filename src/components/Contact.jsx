@@ -321,7 +321,7 @@ const Contact = () => {
           ${theme === "dark" ? "border-white/10" : "border-gray-200"}`}
       >
         <p className={`font-mono text-sm ${theme === "dark" ? "text-gray-500" : "text-gray-500"}`}>
-          © 2025 Muhammad Talha. Built with React & Tailwind CSS
+          © Built with React & Tailwind CSS
         </p>
       </motion.div>
     </section>
