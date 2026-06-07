@@ -264,13 +264,13 @@ const Contact = () => {
                   {info.link ? (
                     <a
                       href={info.link}
-                      className={`font-mono transition-colors
+                      className={`font-mono transition-colors break-all text-sm sm:text-base
                         ${theme === "dark" ? "text-white hover:text-purple-400" : "text-gray-900 hover:text-purple-600"}`}
                     >
                       {info.value}
                     </a>
                   ) : (
-                    <p className={`font-mono ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+                    <p className={`font-mono break-all text-sm sm:text-base ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
                       {info.value}
                     </p>
                   )}

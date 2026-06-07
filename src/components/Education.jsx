@@ -125,7 +125,7 @@ const Education = () => {
             </div>
 
             {/* Content Card */}
-            <div className={`ml-20 md:ml-0 md:w-[calc(50%-3rem)] ${idx % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
+            <div className={`w-[calc(100%-5rem)] ml-20 md:ml-0 md:w-[calc(50%-3rem)] ${idx % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
               <motion.div
                 whileHover={{ scale: 1.02, y: -5 }}
                 className={`p-6 rounded-2xl shadow-xl transition-all duration-300 border

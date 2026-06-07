@@ -102,7 +102,7 @@ const Hero = () => {
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1, duration: 0.5 }}
-        className={`fixed bottom-6 right-6 z-[70] p-4 rounded-2xl shadow-2xl border max-w-xs
+        className={`fixed bottom-6 right-6 z-[70] p-4 rounded-2xl shadow-2xl border max-w-xs hidden md:block
           ${theme === "dark"
             ? "bg-[#232336]/95 backdrop-blur-lg border-white/10"
             : "bg-white/95 backdrop-blur-lg border-purple-200"}`}
@@ -158,7 +158,7 @@ const Hero = () => {
         </motion.p>
 
         <motion.h1
-          className={`text-6xl md:text-8xl font-bold transition-colors duration-500
+          className={`text-4xl sm:text-6xl md:text-8xl font-bold transition-colors duration-500
             ${theme === "dark" ? "text-white" : "text-indigo-900"}`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -168,7 +168,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.div
-          className="text-2xl md:text-4xl font-medium h-[60px] mb-8"
+          className="text-2xl md:text-4xl font-medium min-h-[60px] md:min-h-[80px] mb-8"
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
@@ -218,7 +218,7 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             <a
               href="#contact"
-              className={`px-10 py-4 rounded-full font-medium transition-all duration-300 shadow-lg text-lg flex items-center gap-2
+              className={`px-6 py-3 sm:px-10 sm:py-4 rounded-full font-medium transition-all duration-300 shadow-lg text-base sm:text-lg flex items-center gap-2
               ${theme === "dark"
                 ? "bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 hover:shadow-indigo-500/30 text-white"
                 : "bg-gradient-to-r from-indigo-200 to-purple-200 hover:from-indigo-300 hover:to-purple-300 text-indigo-900 border border-indigo-200"}`}
@@ -235,7 +235,7 @@ const Hero = () => {
               href="https://github.com/MuhamadTalha12?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
-              className={`px-10 py-4 rounded-full font-medium transition-all duration-300 text-lg flex items-center gap-2
+              className={`px-6 py-3 sm:px-10 sm:py-4 rounded-full font-medium transition-all duration-300 text-base sm:text-lg flex items-center gap-2
               ${theme === "dark"
                 ? "border border-indigo-400/50 text-indigo-300 hover:bg-indigo-500/10"
                 : "border border-indigo-300 text-indigo-700 hover:bg-indigo-100"}`}
@@ -252,7 +252,7 @@ const Hero = () => {
             <a
               href="/Talha(CV).pdf"
               download
-              className={`px-10 py-4 rounded-full font-medium transition-all duration-300 shadow-lg text-lg flex items-center gap-2
+              className={`px-6 py-3 sm:px-10 sm:py-4 rounded-full font-medium transition-all duration-300 shadow-lg text-base sm:text-lg flex items-center gap-2
                 ${theme === "dark"
                   ? "bg-indigo-700 text-white hover:bg-indigo-800"
                   : "bg-indigo-200 text-indigo-900 hover:bg-indigo-300 border border-indigo-200"}`}
@@ -335,7 +335,7 @@ const Hero = () => {
         >
           <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-indigo-400 to-purple-500 opacity-70 blur-xl animate-pulse"></div>
           <motion.div
-            className="relative w-72 h-72 md:w-96 md:h-96"
+            className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96"
             style={{
               rotateX,
               rotateY,
@@ -357,7 +357,7 @@ const Hero = () => {
             <div className="absolute inset-0 rounded-full border-2 border-white/10 pointer-events-none"></div>
           </motion.div>
 
-          <div className="absolute -bottom-8 -right-8 bg-indigo-600/90 text-sm font-mono px-4 py-2 rounded-lg backdrop-blur-sm flex items-center gap-2">
+          <div className="absolute bottom-0 right-0 md:-bottom-8 md:-right-8 bg-indigo-600/90 text-xs sm:text-sm font-mono px-4 py-2 rounded-lg backdrop-blur-sm flex items-center gap-2">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>

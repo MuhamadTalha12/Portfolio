@@ -46,7 +46,7 @@ const BackToTop = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          className={`fixed bottom-[180px] right-6 z-[60] p-4 rounded-full shadow-2xl transition-all duration-300 border
+          className={`fixed bottom-6 md:bottom-[180px] right-6 z-[60] p-4 rounded-full shadow-2xl transition-all duration-300 border
             ${theme === "dark"
               ? "bg-gradient-to-r from-indigo-500 to-purple-600 border-white/10 hover:shadow-indigo-500/50"
               : "bg-gradient-to-r from-indigo-400 to-purple-500 border-indigo-200 hover:shadow-indigo-300/50"}`}

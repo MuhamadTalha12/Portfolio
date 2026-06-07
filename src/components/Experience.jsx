@@ -111,7 +111,7 @@ const Experience = () => {
             />
 
             {/* Content Card */}
-            <div className={`ml-16 md:ml-0 md:w-[calc(50%-2rem)] ${idx % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
+            <div className={`w-[calc(100%-4rem)] ml-16 md:ml-0 md:w-[calc(50%-2rem)] ${idx % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
               <motion.div
                 whileHover={{ scale: 1.02, y: -5 }}
                 className={`p-6 rounded-2xl shadow-xl transition-all duration-300 border
